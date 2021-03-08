@@ -16,11 +16,11 @@ def replicate():
     halfTierceLower = halfTierce - moe
     halfTierceUpper = halfTierce + moe
 
-# Phase 2 establish scenarios 1/6 probability
     minimum = 0
     both = 0
 
-# Phase 3 Replicate scenario 100k times
+# Phase 3 Replicate scenario 100k times and get percents/proportions
+
 
     for i in range(100000):
         elphOne = random.randint(1, 6)
@@ -33,10 +33,8 @@ def replicate():
     if elphOne == zkpr and elphTwo == zkpr:
         both = both + 1
 
-# Phase 4 Get percents/proportions
-
-    prop1 = (minimum * 100) / 100000
-    prop2 = (both * 100) / 100000
+    prop1 = (minimum * 100) / float(100000)
+    prop2 = (both * 100) / float(100000)
 
     print("What percent of the time a single elephant is in a pen :%.2f" % prop1, "%")
     print("What percent of the time a two elephants are in a pen :%.2f" % prop2, "%")
@@ -46,7 +44,7 @@ def replicate():
         print("Custodian is right")
 
     run = input("Repeat experiment? (yes or no):")
-    if run == "no":
+    if run == "yes":
         replicate()
 
 
