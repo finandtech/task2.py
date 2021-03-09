@@ -1,6 +1,6 @@
 import random
 
-# phase 1 Zookeeper guesses 2% margin of error (moe)
+# phase 1 Zookeeper inference, 2% margin of error (moe)
 def replicate():
         moe = 0.02
 
@@ -23,9 +23,7 @@ def replicate():
     # Elephant one: Jane
     # Elephant two Fred
 
-
-
-        for scenario in range(100000):
+        for probability in range(100000):
             elphOne = random.randint(1, 6)
             elphTwo = random.randint(1, 6)
             zkpr = random.randint(1, 6)
@@ -44,12 +42,12 @@ def replicate():
         print("What percentage of the time there is at least one elephant in the pen :%.2f" % prop1, "%")
         print("What percentage of time are both elephants in the pen? :%.2f" % prop2, "%")
         while (prop1 >= tierceLower and prop2 <= tierceUpper) and (prop2 >= halfTierceLower and prop2 <= halfTierceUpper):
-            print("Therefore zookeeper is right ")
+            print("Therefore ZOOKEPER is right ")
         else:
             print("Therefore CUSTODIAN is right")
 
-        run = input("Repeat experiment? (yes or no):")
-        if run == "yes":
+        repeat = input("Repeat simulation? (yes or no):")
+        while repeat == "yes":
             replicate()
 
 replicate()
