@@ -46,8 +46,14 @@ def replicate():
         else:
             print("Therefore CUSTODIAN is right")
 
-        repeat = input("Repeat simulation? (yes or no):")
+        repeat = input("Repeat simulation? (yes or no):").lower()
+
         while repeat == "yes":
             replicate()
+            break
+        else:
+            print("Simulation over")
+
+
 
 replicate()
