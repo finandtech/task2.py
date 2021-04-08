@@ -1,6 +1,6 @@
 import random
-
 # phase 1 Zookeeper inference, 2% margin of error (moe)
+
 def replicate():
         moe = 0.02
 
@@ -19,7 +19,7 @@ def replicate():
         minimum = 0
         both = 0
 
-    # Phase 3 Replicate scenario 100k times and get percents/proportions
+    # Phase 2 Replicate scenario 100k times and get percents/proportions
     # Elephant one: Jane
     # Elephant two Fred
 
