@@ -1,0 +1,20 @@
+# phase 1 Zookeeper inference, 2% margin of error (moe)
+
+
+-define one third probability + or -  margin of error
+-define one sixth probability  + or -  margin of error
+
+Phase 2 Replicate scenario 100k times and get percents/proportions
+
+-define elephant varibales 
+-run simulation of each varaible 100,000 times
+
+Phase 3
+
+-compare variables to zookeeper's inference and custodian's inference
+-deteremine who's correct
+
+
+
+
+
